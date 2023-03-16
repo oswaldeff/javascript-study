@@ -29,3 +29,17 @@ typeof parseFloat("3.14") // 출력결과 number타입
 Number("3.14") // 출력결과 3.14 !Number은 소수도 알아서 숫자로 바꿔준다!
 parseInt("3월") // 출력결과 3 -> parseInt는 문자열에서 숫자를 parsing
 Number("3월") // 출력결과 NaN -> Number은 문자열에서 숫자를 parsing하지 못하고 NaN을 return
+
+// 문자열 자르기
+'12321'.substring(0, 3) // 출력결과 123
+
+// input
+prompt() //
+// prompt parsing
+parseInt(prompt()) // 출력결과 NaN, NaN은 Not a Number의 약자
+
+// 진법 parsing
+parseInt("101", 2) // 2진법
+
+// Infinity
+2 / 0 // 출력결과 Infinity, Infinity의 타입은 Number
