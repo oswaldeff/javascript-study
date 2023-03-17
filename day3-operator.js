@@ -43,3 +43,13 @@ parseInt("101", 2) // 2진법
 
 // Infinity
 2 / 0 // 출력결과 Infinity, Infinity의 타입은 Number
+
+// 형 변환(type casting) +
+"문자열" + 12 // 출력결과 "문자열12", 문자열을 다른 자료형과 더하게 되는 경우 문자열로 return
+
+// 문자열 parsing
+parseInt("문자열") // 출력결과 NaN
+
+// 형 변환(type casting) -
+"문자열" - 0 // 출력결과 NaN
+"3" - 0 // 출력결과 Number타입의 3
