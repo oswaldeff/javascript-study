@@ -16,6 +16,7 @@ function delay(ms) {
     return new Promise((resolve => setTimeout(resolve, ms)));
 }
 
+// bad example!
 async function getToken() {
     await delay(1000);
     return "abcd1234";
@@ -29,7 +30,17 @@ async function getUserName() {
 function login() {
     return getToken().then(token => {
         return getUserName().then(userName => '${token} ${userName}');
-    });
+    }); // 콜백지옥
+}
+
+login().then(console.log);
+
+
+// good example!
+async function login() {
+    const token = await getToken();
+    const userName = await getUserName();
+    return '${token} ${userName}';
 }
 
 login().then(console.log);
