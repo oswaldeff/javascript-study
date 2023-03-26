@@ -44,3 +44,20 @@ async function login() {
 }
 
 login().then(console.log);
+
+// 병렬처리
+async function login() {
+    const tokenPromise = getToken(); // 해당 line에서 promise생성하여 실행
+    const userNamePromise = getUserName(); // 해당 line에서 promise생성하여 실행
+    const token = await tokenPromise;
+    const userName = await userNamePromise;
+    return '${token} ${userName}';
+}
+
+// 병렬처리 with Promise API
+async function login() {
+    return Promise.all([getToken(), getUserName()])
+        .then(user => user.join('')
+    );
+}
+login().then(console.log);
