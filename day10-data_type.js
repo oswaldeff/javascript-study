@@ -38,3 +38,4 @@ const FK2 = Symbol.for('2');
 console.log(PK2 === FK2); // 출력결과 true, 동일한 값을 부여하기 위해서는 for사용
 // 부여된 값을 확인하려면 Symbol로 부여된 variable에 description으로 출력해본다.
 console.log(PK2.description);
+ 
