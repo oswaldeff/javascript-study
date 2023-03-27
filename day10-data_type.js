@@ -16,6 +16,7 @@ console.log(globalActor); // daniel출력
 } 
 //console.log(actor); // error!
 
+
 // const: constants variable :: 'emutable'
 // 아래의 세가지 관점에서 const사용 권장
 // 1. security, 외부에서의 access를 통해 변동가능한 부분을 차단
